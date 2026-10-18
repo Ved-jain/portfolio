@@ -9,7 +9,12 @@
 - **🎯 Authentic Personality & Verification**:
   - Live GitHub profile avatar with dynamic fallback.
   - Interactive "ved.config.ts" code profile window.
-  - Authentic projects showcase: **Ascent** (Live CP Analytics), **KisanMandi** (Agri-Fintech Compound AI), and **Zenith** (Transactional Trading Engine).
+  - Authentic projects showcase:
+    - **Ascent** (Live CP Peer Journey Comparison & Analytics Platform)
+    - **KisanMandi** (Agri-Fintech Compound AI & Mandi Realization Engine)
+    - **CredIntel** (Explainable Alternative Credit Intelligence — TVS Credit E.P.I.C. 8.0 Prototype)
+    - **WinDoc** (Evidence-Driven Windows Diagnostics & Safe Repair CLI)
+    - **Zenith** (High-Concurrency Transactional Stock Trading Engine)
   - Verified profiles: LeetCode Knight (1925), Codeforces (1353), GitHub, LinkedIn.
   - Downloadable genuine resume (`resume.pdf`).
 - **📱 Fluid Responsiveness**: Designed from the ground up for mobile, tablet, desktop, and ultra-wide screens.
