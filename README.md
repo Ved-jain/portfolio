@@ -1,6 +1,6 @@
 # Ved Jain — Personal Developer Portfolio
 
-> Modern, high-performance portfolio website of Ved Jain — Full Stack Developer & Competitive Programmer (LeetCode Knight, 1925) at IIITDM Jabalpur.
+> Clean, minimal, high-performance portfolio website of Ved Jain — Software Engineer & Competitive Programmer (LeetCode Knight, 1925) at IIITDM Jabalpur.
 
 ## ✨ Features
 
