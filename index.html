@@ -45,6 +45,8 @@
       --accent: #4f46e5;
       --accent-subtle: rgba(79, 70, 229, 0.07);
       --accent-hover: #4338ca;
+      --cursor-glow: rgba(79, 70, 229, 0.09);
+      --cursor-glow-active: rgba(79, 70, 229, 0.18);
       --tag-bg: #f3f4f6;
       --tag-ink: #374151;
       --nav-bg: rgba(255, 255, 255, 0.82);
@@ -67,6 +69,8 @@
       --accent: #818cf8;
       --accent-subtle: rgba(129, 140, 248, 0.12);
       --accent-hover: #a5b4fc;
+      --cursor-glow: rgba(129, 140, 248, 0.14);
+      --cursor-glow-active: rgba(129, 140, 248, 0.25);
       --tag-bg: #1c1c22;
       --tag-ink: #d1d5db;
       --nav-bg: rgba(9, 9, 11, 0.82);
@@ -98,6 +102,54 @@
       pointer-events: none;
       z-index: -1;
       opacity: 0.9;
+    }
+
+    /* ── GEMINI INTERACTIVE CANVAS & CURSOR AURA ─────────────────── */
+    #gemini-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    #cursor-aura {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 1;
+      transform: translate(-500px, -500px);
+      background: radial-gradient(circle, var(--cursor-glow) 0%, transparent 70%);
+      opacity: 0;
+      transition: opacity 0.4s ease, width 0.3s cubic-bezier(0.16, 1, 0.3, 1), height 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: transform;
+    }
+
+    body:hover #cursor-aura {
+      opacity: 1;
+    }
+
+    #cursor-aura.hover-active {
+      width: 360px;
+      height: 360px;
+      background: radial-gradient(circle, var(--cursor-glow-active) 0%, transparent 70%);
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    main.container, footer {
+      position: relative;
+      z-index: 10;
     }
 
     ::selection { background: var(--accent); color: #ffffff; }
@@ -1213,6 +1265,12 @@
 </head>
 <body>
 
+  <!-- GEMINI INTERACTIVE BACKGROUND CANVAS -->
+  <canvas id="gemini-canvas" aria-hidden="true"></canvas>
+
+  <!-- GEMINI CURSOR AURA GLOW -->
+  <div id="cursor-aura" aria-hidden="true"></div>
+
   <!-- TOAST NOTIFICATION -->
   <div id="toast" role="status" aria-live="polite">
     <span id="toast-icon">✓</span>
@@ -1847,6 +1905,185 @@
         showToast('Mail client opened & message copied!');
         form.reset();
       });
+    }
+
+    /* ── GEMINI INTERACTIVE DOTS CANVAS & CURSOR AURA ─────────── */
+    const canvas = document.getElementById('gemini-canvas');
+    const aura = document.getElementById('cursor-aura');
+    const ctx = canvas ? canvas.getContext('2d') : null;
+
+    if (canvas && ctx) {
+      let width = (canvas.width = window.innerWidth);
+      let height = (canvas.height = window.innerHeight);
+
+      let dots = [];
+      const SPACING = 38;
+      const MOUSE_RADIUS = 135;
+      const SPRING = 0.065;
+      const FRICTION = 0.86;
+
+      let mouse = { x: -1000, y: -1000 };
+      let auraX = -1000, auraY = -1000;
+
+      function initDots() {
+        dots = [];
+        const cols = Math.ceil(width / SPACING) + 2;
+        const rows = Math.ceil(height / SPACING) + 2;
+        const offsetX = (width - (cols - 1) * SPACING) / 2;
+        const offsetY = (height - (rows - 1) * SPACING) / 2;
+
+        for (let r = 0; r < rows; r++) {
+          for (let c = 0; c < cols; c++) {
+            const ox = offsetX + c * SPACING;
+            const oy = offsetY + r * SPACING;
+            dots.push({
+              ox: ox,
+              oy: oy,
+              x: ox,
+              y: oy,
+              vx: 0,
+              vy: 0,
+              baseRadius: 1.15,
+              distToMouse: MOUSE_RADIUS
+            });
+          }
+        }
+      }
+
+      initDots();
+
+      window.addEventListener('resize', () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+        initDots();
+      }, { passive: true });
+
+      window.addEventListener('mousemove', (e) => {
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+      }, { passive: true });
+
+      window.addEventListener('mouseleave', () => {
+        mouse.x = -1000;
+        mouse.y = -1000;
+      }, { passive: true });
+
+      window.addEventListener('touchmove', (e) => {
+        if (e.touches && e.touches[0]) {
+          mouse.x = e.touches[0].clientX;
+          mouse.y = e.touches[0].clientY;
+        }
+      }, { passive: true });
+
+      window.addEventListener('touchend', () => {
+        mouse.x = -1000;
+        mouse.y = -1000;
+      }, { passive: true });
+
+      // Expand cursor aura on interactive hover
+      document.querySelectorAll('a, button, .project-card, .skill-category, .ach-item, .contact-link-pill').forEach(el => {
+        el.addEventListener('mouseenter', () => aura && aura.classList.add('hover-active'));
+        el.addEventListener('mouseleave', () => aura && aura.classList.remove('hover-active'));
+      });
+
+      let time = 0;
+      function renderGemini() {
+        time += 0.02;
+        ctx.clearRect(0, 0, width, height);
+
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        const baseDotAlpha = isDark ? 0.15 : 0.12;
+        const activeDotColor = isDark ? 'rgba(129, 140, 248, ' : 'rgba(79, 70, 229, ';
+        const baseColor = isDark ? `rgba(255, 255, 255, ${baseDotAlpha})` : `rgba(15, 23, 42, ${baseDotAlpha})`;
+        const lineColor = isDark ? 'rgba(129, 140, 248, ' : 'rgba(79, 70, 229, ';
+
+        // Smooth cursor aura glide
+        if (aura && mouse.x > -500) {
+          auraX += (mouse.x - auraX) * 0.15;
+          auraY += (mouse.y - auraY) * 0.15;
+          aura.style.transform = `translate(${auraX - (aura.offsetWidth / 2)}px, ${auraY - (aura.offsetHeight / 2)}px)`;
+        }
+
+        const nearDots = [];
+
+        for (let i = 0; i < dots.length; i++) {
+          const dot = dots[i];
+
+          // Organic idle breathing wave
+          const idleWave = Math.sin(time + dot.ox * 0.012 + dot.oy * 0.012) * 0.6;
+          const targetOx = dot.ox;
+          const targetOy = dot.oy + idleWave;
+
+          // Vector to cursor
+          const dx = dot.x - mouse.x;
+          const dy = dot.y - mouse.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+
+          if (dist < MOUSE_RADIUS && dist > 0) {
+            const force = (1 - dist / MOUSE_RADIUS);
+            const angle = Math.atan2(dy, dx);
+            dot.vx += Math.cos(angle) * force * 3.4;
+            dot.vy += Math.sin(angle) * force * 3.4;
+            dot.distToMouse = dist;
+            nearDots.push(dot);
+          } else {
+            dot.distToMouse = MOUSE_RADIUS;
+          }
+
+          // Spring restoration
+          const hx = targetOx - dot.x;
+          const hy = targetOy - dot.y;
+          dot.vx += hx * SPRING;
+          dot.vy += hy * SPRING;
+
+          // Damping
+          dot.vx *= FRICTION;
+          dot.vy *= FRICTION;
+
+          dot.x += dot.vx;
+          dot.y += dot.vy;
+
+          // Dot glow & scale based on cursor proximity
+          const proximity = 1 - Math.min(dot.distToMouse / MOUSE_RADIUS, 1);
+          let r = dot.baseRadius;
+          let fill = baseColor;
+
+          if (proximity > 0) {
+            r = dot.baseRadius + proximity * 2.2;
+            const alpha = baseDotAlpha + proximity * (1 - baseDotAlpha);
+            fill = activeDotColor + alpha + ')';
+          }
+
+          ctx.beginPath();
+          ctx.arc(dot.x, dot.y, r, 0, Math.PI * 2);
+          ctx.fillStyle = fill;
+          ctx.fill();
+        }
+
+        // Constellation lines connecting nearby displaced dots (Gemini network effect)
+        if (nearDots.length > 1) {
+          for (let i = 0; i < nearDots.length; i++) {
+            for (let j = i + 1; j < nearDots.length; j++) {
+              const d1 = nearDots[i];
+              const d2 = nearDots[j];
+              const distBetween = Math.hypot(d1.x - d2.x, d1.y - d2.y);
+              if (distBetween < SPACING * 1.5) {
+                const lineAlpha = (1 - distBetween / (SPACING * 1.5)) * 0.32;
+                ctx.beginPath();
+                ctx.moveTo(d1.x, d1.y);
+                ctx.lineTo(d2.x, d2.y);
+                ctx.strokeStyle = lineColor + lineAlpha + ')';
+                ctx.lineWidth = 1;
+                ctx.stroke();
+              }
+            }
+          }
+        }
+
+        requestAnimationFrame(renderGemini);
+      }
+
+      renderGemini();
     }
   </script>
 </body>
