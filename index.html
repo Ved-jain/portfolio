@@ -1,39 +1,57 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ved Jain — Software Engineer</title>
-  
+
   <!-- SEO & Meta -->
-  <meta name="description" content="Portfolio of Ved Jain — Software Engineer, LeetCode Knight (1925), and ECE student at IIITDM Jabalpur. Building scalable backends, developer tools, and ML applications."/>
-  <meta name="keywords" content="Ved Jain, Software Engineer, IIITDM Jabalpur, LeetCode Knight, React, FastAPI, Node.js, Redis, Systems, Portfolio"/>
-  <meta name="author" content="Ved Jain"/>
-  
+  <meta name="description"
+    content="Portfolio of Ved Jain — Software Engineer, LeetCode Knight (1925), and ECE student at IIITDM Jabalpur. Building scalable backends, developer tools, and ML applications." />
+  <meta name="keywords"
+    content="Ved Jain, Software Engineer, IIITDM Jabalpur, LeetCode Knight, React, FastAPI, Node.js, Redis, Systems, Portfolio" />
+  <meta name="author" content="Ved Jain" />
+
   <!-- Open Graph / Social Sharing -->
-  <meta property="og:type" content="website"/>
-  <meta property="og:title" content="Ved Jain — Software Engineer"/>
-  <meta property="og:description" content="LeetCode Knight (1925) · 800+ DSA Solved · Builder of Ascent, KisanMandi, CredIntel &amp; WinDoc. IIITDM Jabalpur."/>
-  <meta property="og:image" content="https://github.com/Ved-jain.png"/>
-  <meta property="twitter:card" content="summary_large_image"/>
-  <meta property="twitter:title" content="Ved Jain — Software Engineer"/>
-  <meta property="twitter:description" content="Software Engineer &amp; ECE student at IIITDM Jabalpur."/>
-  <meta property="twitter:image" content="https://github.com/Ved-jain.png"/>
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ved Jain — Software Engineer" />
+  <meta property="og:description"
+    content="LeetCode Knight (1925) · 1000+ DSA Solved · Builder of Ascent, KisanMandi, CredIntel &amp; WinDoc. IIITDM Jabalpur." />
+  <meta property="og:image" content="https://github.com/Ved-jain.png" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="Ved Jain — Software Engineer" />
+  <meta property="twitter:description" content="Software Engineer &amp; ECE student at IIITDM Jabalpur." />
+  <meta property="twitter:image" content="https://github.com/Ved-jain.png" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%2318181b'/%3E%3Ctext x='50' y='64' font-family='system-ui,-apple-system,sans-serif' font-size='42' font-weight='700' fill='white' text-anchor='middle'%3EVJ%3C/text%3E%3C/svg%3E"/>
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%2318181b'/%3E%3Ctext x='50' y='64' font-family='system-ui,-apple-system,sans-serif' font-size='42' font-weight='700' fill='white' text-anchor='middle'%3EVJ%3C/text%3E%3C/svg%3E" />
 
   <!-- Typography -->
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
 
   <style>
     /* ── RESET & TOKENS ─────────────────────────────────────────── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { font-size: 16px; scroll-behavior: smooth; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    :root, [data-theme="light"] {
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+    }
+
+    :root,
+    [data-theme="light"] {
       --bg: #ffffff;
       --bg-subtle: #f9fafb;
       --bg-card: #ffffff;
@@ -147,18 +165,34 @@
       z-index: 50;
     }
 
-    main.container, footer {
+    main.container,
+    footer {
       position: relative;
       z-index: 10;
     }
 
-    ::selection { background: var(--accent); color: #ffffff; }
+    ::selection {
+      background: var(--accent);
+      color: #ffffff;
+    }
 
     /* Custom Scrollbar */
-    ::-webkit-scrollbar { width: 7px; }
-    ::-webkit-scrollbar-track { background: transparent; }
-    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
-    ::-webkit-scrollbar-thumb:hover { background: var(--ink-muted); }
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--ink-muted);
+    }
 
     /* ── LAYOUT CONTAINER ────────────────────────────────────────── */
     .container {
@@ -173,6 +207,7 @@
         opacity: 0;
         transform: translateY(14px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
@@ -183,18 +218,32 @@
       animation: enterUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
     }
 
-    .delay-1 { animation-delay: 0.06s; }
-    .delay-2 { animation-delay: 0.12s; }
-    .delay-3 { animation-delay: 0.18s; }
-    .delay-4 { animation-delay: 0.24s; }
-    .delay-5 { animation-delay: 0.30s; }
+    .delay-1 {
+      animation-delay: 0.06s;
+    }
+
+    .delay-2 {
+      animation-delay: 0.12s;
+    }
+
+    .delay-3 {
+      animation-delay: 0.18s;
+    }
+
+    .delay-4 {
+      animation-delay: 0.24s;
+    }
+
+    .delay-5 {
+      animation-delay: 0.30s;
+    }
 
     /* ── SCROLL REVEAL ───────────────────────────────────────────── */
     .reveal {
       opacity: 0;
       transform: translateY(18px);
       transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
-                  transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
       will-change: opacity, transform;
     }
 
@@ -325,9 +374,17 @@
       stroke-width: 2;
     }
 
-    .moon-icon { display: none; }
-    [data-theme="dark"] .sun-icon { display: none; }
-    [data-theme="dark"] .moon-icon { display: block; }
+    .moon-icon {
+      display: none;
+    }
+
+    [data-theme="dark"] .sun-icon {
+      display: none;
+    }
+
+    [data-theme="dark"] .moon-icon {
+      display: block;
+    }
 
     /* Mobile Menu Toggle */
     .mobile-menu-btn {
@@ -431,7 +488,9 @@
     }
 
     @keyframes radar-ping {
-      75%, 100% {
+
+      75%,
+      100% {
         transform: scale(2.6);
         opacity: 0;
       }
@@ -609,7 +668,8 @@
     }
 
     /* ── SECTION COMMONS ─────────────────────────────────────────── */
-    .section, #hero {
+    .section,
+    #hero {
       scroll-margin-top: 75px;
     }
 
@@ -714,8 +774,8 @@
       padding: 1.6rem;
       box-shadow: var(--card-shadow);
       transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-                  box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-                  border-color 0.25s ease;
+        box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.25s ease;
       overflow: hidden;
     }
 
@@ -908,8 +968,8 @@
       border-radius: 10px;
       padding: 1.25rem;
       transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-                  border-color 0.25s ease,
-                  box-shadow 0.25s ease;
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
     }
 
     .skill-category:hover {
@@ -948,9 +1008,9 @@
       border: 1px solid var(--border);
       border-radius: 10px;
       transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
-                  border-color 0.2s ease,
-                  background-color 0.2s ease,
-                  box-shadow 0.2s ease;
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
     }
 
     .ach-item:hover {
@@ -1013,8 +1073,8 @@
       align-items: flex-start;
       gap: 1.25rem;
       transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-                  border-color 0.25s ease,
-                  box-shadow 0.25s ease;
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
     }
 
     .edu-box:hover {
@@ -1146,7 +1206,8 @@
       gap: 0.75rem;
     }
 
-    .form-input, .form-textarea {
+    .form-input,
+    .form-textarea {
       width: 100%;
       padding: 0.7rem 0.9rem;
       font-family: var(--sans);
@@ -1159,7 +1220,8 @@
       transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .form-input:focus, .form-textarea:focus {
+    .form-input:focus,
+    .form-textarea:focus {
       border-color: var(--accent);
       background: var(--bg);
       box-shadow: 0 0 0 3px var(--accent-subtle);
@@ -1237,14 +1299,36 @@
 
     /* ── RESPONSIVE ──────────────────────────────────────────────── */
     @media (max-width: 640px) {
-      .hero-title { font-size: 1.95rem; }
-      .metrics-bar { gap: 0.85rem; }
-      .metric-sep { display: none; }
-      .metric { width: 45%; }
-      .social-links { margin-left: 0; width: 100%; margin-top: 0.5rem; }
-      .form-grid { grid-template-columns: 1fr; }
-      
-      .mobile-menu-btn { display: block; }
+      .hero-title {
+        font-size: 1.95rem;
+      }
+
+      .metrics-bar {
+        gap: 0.85rem;
+      }
+
+      .metric-sep {
+        display: none;
+      }
+
+      .metric {
+        width: 45%;
+      }
+
+      .social-links {
+        margin-left: 0;
+        width: 100%;
+        margin-top: 0.5rem;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
       .nav-links {
         display: none;
         position: absolute;
@@ -1258,11 +1342,18 @@
         gap: 1rem;
         box-shadow: var(--card-shadow);
       }
-      .nav-links.open { display: flex; }
-      .btn-nav-resume { display: none; }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .btn-nav-resume {
+        display: none;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <!-- GEMINI INTERACTIVE BACKGROUND CANVAS -->
@@ -1296,18 +1387,38 @@
 
         <a href="VED_JAIN_RP.pdf" download="VED_JAIN_RP.pdf" target="_blank" class="btn-nav-resume">
           Resume
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
         </a>
 
         <!-- Theme Toggle -->
         <button class="theme-toggle" id="theme-btn" aria-label="Toggle theme">
-          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
         </button>
 
         <!-- Mobile Menu Button -->
         <button class="mobile-menu-btn" id="hb" aria-label="Toggle navigation menu" aria-expanded="false">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
         </button>
       </div>
     </div>
@@ -1319,7 +1430,8 @@
     <section id="hero" class="hero" aria-label="Introduction">
       <div class="hero-top fade-in">
         <div class="hero-avatar-wrap">
-          <img src="https://github.com/Ved-jain.png" alt="Ved Jain" class="hero-avatar" onerror="this.style.display='none'; document.getElementById('hero-fallback').style.display='flex';"/>
+          <img src="https://github.com/Ved-jain.png" alt="Ved Jain" class="hero-avatar"
+            onerror="this.style.display='none'; document.getElementById('hero-fallback').style.display='flex';" />
           <div class="hero-avatar-fallback" id="hero-fallback" style="display:none;">VJ</div>
         </div>
         <div class="status-dot-wrap">
@@ -1335,7 +1447,10 @@
       <p class="hero-subtitle fade-in delay-2">Software Engineer &amp; Competitive Programmer</p>
 
       <p class="hero-bio fade-in delay-3">
-        Undergraduate in Electronics &amp; Communication Engineering at <strong>IIITDM Jabalpur</strong> (2024–2028). <strong>LeetCode Knight (1925)</strong> with <strong>800+ solved algorithmic problems</strong>. I engineer high-throughput backends, developer tools, and explainable AI applications with measurable latency and clean architecture.
+        Undergraduate in Electronics &amp; Communication Engineering at <strong>IIITDM Jabalpur</strong> (2024–2028).
+        <strong>LeetCode Knight (1925)</strong> with <strong>800+ solved algorithmic problems</strong>. I engineer
+        high-throughput backends, developer tools, and explainable AI applications with measurable latency and clean
+        architecture.
       </p>
 
       <!-- Key Metrics Strip -->
@@ -1365,10 +1480,17 @@
       <div class="hero-actions fade-in delay-5">
         <a href="#projects" class="btn btn-primary">
           View Projects
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
         </a>
         <a href="VED_JAIN_RP.pdf" download="VED_JAIN_RP.pdf" target="_blank" class="btn btn-outline">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
           Resume
         </a>
         <button type="button" class="btn btn-outline" id="hero-copy-btn">
@@ -1377,17 +1499,32 @@
 
         <!-- Social Icons -->
         <div class="social-links">
-          <a href="https://github.com/Ved-jain" target="_blank" rel="noopener" aria-label="GitHub Profile" class="social-btn" title="GitHub">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          <a href="https://github.com/Ved-jain" target="_blank" rel="noopener" aria-label="GitHub Profile"
+            class="social-btn" title="GitHub">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+            </svg>
           </a>
-          <a href="https://www.linkedin.com/in/ved-jain-719094313/" target="_blank" rel="noopener" aria-label="LinkedIn Profile" class="social-btn" title="LinkedIn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          <a href="https://www.linkedin.com/in/ved-jain-719094313/" target="_blank" rel="noopener"
+            aria-label="LinkedIn Profile" class="social-btn" title="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
           </a>
-          <a href="https://leetcode.com/u/vedjain_1/" target="_blank" rel="noopener" aria-label="LeetCode Profile" class="social-btn" title="LeetCode (Knight 1925)">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .666-1.607L9.36 7.91l4.887-5.234a1.375 1.375 0 0 0-.764-2.676zm3.674 12.002H8.38a1.375 1.375 0 0 0 0 2.75h8.777a1.375 1.375 0 0 0 0-2.75z"/></svg>
+          <a href="https://leetcode.com/u/vedjain_1/" target="_blank" rel="noopener" aria-label="LeetCode Profile"
+            class="social-btn" title="LeetCode (Knight 1925)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .666-1.607L9.36 7.91l4.887-5.234a1.375 1.375 0 0 0-.764-2.676zm3.674 12.002H8.38a1.375 1.375 0 0 0 0 2.75h8.777a1.375 1.375 0 0 0 0-2.75z" />
+            </svg>
           </a>
           <a href="mailto:vedjain5314@gmail.com" aria-label="Send direct email" class="social-btn" title="Email">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
           </a>
         </div>
       </div>
@@ -1401,13 +1538,21 @@
 
       <div class="about-content">
         <p>
-          I'm a software engineer and 2nd-year B.Tech student in Electronics &amp; Communication Engineering at <strong>IIITDM Jabalpur</strong>. I enjoy taking complex algorithmic and systems challenges and turning them into clean, resilient, high-speed software.
+          I'm a software engineer and 2nd-year B.Tech student in Electronics &amp; Communication Engineering at
+          <strong>IIITDM Jabalpur</strong>. I enjoy taking complex algorithmic and systems challenges and turning them
+          into clean, resilient, high-speed software.
         </p>
         <p>
-          My technical focus spans <strong>distributed web backends</strong>, <strong>systems diagnostics</strong>, and <strong>explainable AI systems</strong>. Whether it's architecting Redis caching layers that eliminate 99.4% of API latency, designing deterministic alternative credit evaluation engines with full factor attribution, writing offline Windows diagnostic CLIs, or training Random Forest models on 7,600+ real government APMC records, I build systems engineered for speed and correctness.
+          My technical focus spans <strong>distributed web backends</strong>, <strong>systems diagnostics</strong>, and
+          <strong>explainable AI systems</strong>. Whether it's architecting Redis caching layers that eliminate 99.4%
+          of API latency, designing deterministic alternative credit evaluation engines with full factor attribution,
+          writing offline Windows diagnostic CLIs, or training Random Forest models on 7,600+ real government APMC
+          records, I build systems engineered for speed and correctness.
         </p>
         <p>
-          In competitive programming, I am a <strong>Knight on LeetCode</strong> (Rating 1925), rank #19 finalist in ICPC-style Code Rumble, and a hackathon runner-up. Outside tech, I serve as the Coordinator of our college's Badminton Club.
+          In competitive programming, I am a <strong>Knight on LeetCode</strong> (Rating 1925), rank #19 finalist in
+          ICPC-style Code Rumble, and a hackathon runner-up. Outside tech, I serve as the Coordinator of our college's
+          Badminton Club.
         </p>
 
         <div class="quick-meta">
@@ -1446,12 +1591,16 @@
             <h3 class="project-title">Ascent ⚡</h3>
             <span class="project-badge">Featured · Live App</span>
           </div>
-          <div class="project-type">May 2026 – Present &nbsp;·&nbsp; AI-Powered Competitive Programming Journey Platform</div>
+          <div class="project-type">May 2026 – Present &nbsp;·&nbsp; AI-Powered Competitive Programming Journey Platform
+          </div>
 
           <ul class="project-bullets">
-            <li>Engineered a CP peer journey comparison platform aligning Codeforces users from Day 1 at identical learning stages across <strong>500+ historical contest points</strong>.</li>
-            <li>Architected multi-layer Redis caching across <strong>8+ data endpoints</strong>, slashing average latency from <strong>850ms → 5ms (99.4% reduction)</strong> with automatic fallback.</li>
-            <li>Integrated Google Gemini and Groq AI for struggle detection, dynamic milestone forecasting, and automated topic upsolving roadmaps.</li>
+            <li>Engineered a CP peer journey comparison platform aligning Codeforces users from Day 1 at identical
+              learning stages across <strong>500+ historical contest points</strong>.</li>
+            <li>Architected multi-layer Redis caching across <strong>8+ data endpoints</strong>, slashing average
+              latency from <strong>850ms → 5ms (99.4% reduction)</strong> with automatic fallback.</li>
+            <li>Integrated Google Gemini and Groq AI for struggle detection, dynamic milestone forecasting, and
+              automated topic upsolving roadmaps.</li>
           </ul>
 
           <div class="project-tags">
@@ -1465,12 +1614,20 @@
           </div>
 
           <div class="project-links">
-            <a href="https://ascent-steel-ten.vercel.app" target="_blank" rel="noopener" class="project-link-btn primary">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            <a href="https://ascent-steel-ten.vercel.app" target="_blank" rel="noopener"
+              class="project-link-btn primary">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
               Live Demo
             </a>
             <a href="https://github.com/Ved-jain/Ascent" target="_blank" rel="noopener" class="project-link-btn">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+              </svg>
               Source Code
             </a>
           </div>
@@ -1482,12 +1639,17 @@
             <h3 class="project-title">KisanMandi (Wheatcoin) 🌾</h3>
             <span class="project-badge">Agri-Fintech &amp; ML</span>
           </div>
-          <div class="project-type">September 2026 – Present &nbsp;·&nbsp; Compound AI Decision &amp; Mandi Realization Engine</div>
+          <div class="project-type">September 2026 – Present &nbsp;·&nbsp; Compound AI Decision &amp; Mandi Realization
+            Engine</div>
 
           <ul class="project-bullets">
-            <li>Trained and deployed a Random Forest model on <strong>7,662 authentic Agmarknet records</strong> across 14 APMC Mandis, achieving <strong>96.0% holdout accuracy</strong> and <strong>93.04% 5-fold CV</strong>.</li>
-            <li>Engineered a true net profit formula calculating Haversine freight logistics, APMC cess, and storage decay depreciation instead of misleading gross prices.</li>
-            <li>Designed Compound AI architecture combining Random Forest risk scoring with Google Gemini for real-time crop liquidation percentages and tactical negotiation guidance.</li>
+            <li>Trained and deployed a Random Forest model on <strong>7,662 authentic Agmarknet records</strong> across
+              14 APMC Mandis, achieving <strong>96.0% holdout accuracy</strong> and <strong>93.04% 5-fold CV</strong>.
+            </li>
+            <li>Engineered a true net profit formula calculating Haversine freight logistics, APMC cess, and storage
+              decay depreciation instead of misleading gross prices.</li>
+            <li>Designed Compound AI architecture combining Random Forest risk scoring with Google Gemini for real-time
+              crop liquidation percentages and tactical negotiation guidance.</li>
           </ul>
 
           <div class="project-tags">
@@ -1500,8 +1662,12 @@
           </div>
 
           <div class="project-links">
-            <a href="https://github.com/Ved-jain/Wheatcoin" target="_blank" rel="noopener" class="project-link-btn primary">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            <a href="https://github.com/Ved-jain/Wheatcoin" target="_blank" rel="noopener"
+              class="project-link-btn primary">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+              </svg>
               Source Code &amp; Docs
             </a>
           </div>
@@ -1513,12 +1679,18 @@
             <h3 class="project-title">CredIntel (Credix) 💳</h3>
             <span class="project-badge">Fintech &amp; Explainable AI</span>
           </div>
-          <div class="project-type">October 2026 – Present &nbsp;·&nbsp; Alternative Credit Intelligence Engine (TVS Credit E.P.I.C. 8.0)</div>
+          <div class="project-type">October 2026 – Present &nbsp;·&nbsp; Alternative Credit Intelligence Engine (TVS
+            Credit E.P.I.C. 8.0)</div>
 
           <ul class="project-bullets">
-            <li>Transparent alternative-credit decisioning prototype built for thin-file and new-to-credit (NTC) borrowers (Kirana owners, freelance professionals, gig workers) lacking traditional bureau scores.</li>
-            <li>Engineered a <strong>5-pillar deterministic heuristic scoring engine</strong> (Cashflow Surplus, Income Stability, Utility Discipline, Debt Burden, Operational Continuity) generating 0–100 scores with full factor attribution.</li>
-            <li>Decoupled mathematical risk scoring from policy gates (<code>Eligible for Review</code>, <code>Manual Review</code>, <code>Enhanced Review</code>, <code>Insufficient Evidence</code>) backed by SQLite audit persistence and 15 automated pytest test suites.</li>
+            <li>Transparent alternative-credit decisioning prototype built for thin-file and new-to-credit (NTC)
+              borrowers (Kirana owners, freelance professionals, gig workers) lacking traditional bureau scores.</li>
+            <li>Engineered a <strong>5-pillar deterministic heuristic scoring engine</strong> (Cashflow Surplus, Income
+              Stability, Utility Discipline, Debt Burden, Operational Continuity) generating 0–100 scores with full
+              factor attribution.</li>
+            <li>Decoupled mathematical risk scoring from policy gates (<code>Eligible for Review</code>,
+              <code>Manual Review</code>, <code>Enhanced Review</code>, <code>Insufficient Evidence</code>) backed by
+              SQLite audit persistence and 15 automated pytest test suites.</li>
           </ul>
 
           <div class="project-tags">
@@ -1533,8 +1705,12 @@
           </div>
 
           <div class="project-links">
-            <a href="https://github.com/Ved-jain/Credix" target="_blank" rel="noopener" class="project-link-btn primary">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            <a href="https://github.com/Ved-jain/Credix" target="_blank" rel="noopener"
+              class="project-link-btn primary">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+              </svg>
               Source Code &amp; Docs
             </a>
           </div>
@@ -1546,12 +1722,16 @@
             <h3 class="project-title">WinDoc (Windows Doctor) 🩺</h3>
             <span class="project-badge">Systems &amp; CLI</span>
           </div>
-          <div class="project-type">October 2026 – Present &nbsp;·&nbsp; Evidence-Driven Diagnostics &amp; Repair CLI</div>
+          <div class="project-type">October 2026 – Present &nbsp;·&nbsp; Evidence-Driven Diagnostics &amp; Repair CLI
+          </div>
 
           <ul class="project-bullets">
-            <li>Engineered an open-source terminal diagnostics and repair utility for Windows 10 &amp; 11 modeled on medical diagnostic principles rather than destructive scripts.</li>
-            <li>Architected a hypothesis evaluation engine across domain modules (Network, DNS, Gateway, Bluetooth) operating under strict least-privilege permissions and quarantined elevation.</li>
-            <li>Constructed safe, verifiable repair routines checking preconditions, capturing snapshot state, and verifying post-repair resolution with 100% offline core.</li>
+            <li>Engineered an open-source terminal diagnostics and repair utility for Windows 10 &amp; 11 modeled on
+              medical diagnostic principles rather than destructive scripts.</li>
+            <li>Architected a hypothesis evaluation engine across domain modules (Network, DNS, Gateway, Bluetooth)
+              operating under strict least-privilege permissions and quarantined elevation.</li>
+            <li>Constructed safe, verifiable repair routines checking preconditions, capturing snapshot state, and
+              verifying post-repair resolution with 100% offline core.</li>
           </ul>
 
           <div class="project-tags">
@@ -1564,8 +1744,12 @@
           </div>
 
           <div class="project-links">
-            <a href="https://github.com/Ved-jain/Windoc" target="_blank" rel="noopener" class="project-link-btn primary">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            <a href="https://github.com/Ved-jain/Windoc" target="_blank" rel="noopener"
+              class="project-link-btn primary">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+              </svg>
               Source Code &amp; Docs
             </a>
           </div>
@@ -1577,12 +1761,16 @@
             <h3 class="project-title">Zenith 📈</h3>
             <span class="project-badge">Fintech &amp; Trading Engine</span>
           </div>
-          <div class="project-type">September 2026 – Present &nbsp;·&nbsp; High-Concurrency Transactional Trading Simulation</div>
+          <div class="project-type">September 2026 – Present &nbsp;·&nbsp; High-Concurrency Transactional Trading
+            Simulation</div>
 
           <ul class="project-bullets">
-            <li>Constructed a full-stack stock simulation platform with <strong>15+ REST endpoints</strong> spanning watchlists, holdings, and portfolio analytics.</li>
-            <li>Implemented atomic multi-document order execution via MongoDB sessions, optimistic concurrency locking, and a 3-attempt exponential retry loop preventing race conditions.</li>
-            <li>Engineered <strong>5 portfolio aggregation pipelines</strong> for P&amp;L telemetry, asset distribution, and risk metrics.</li>
+            <li>Constructed a full-stack stock simulation platform with <strong>15+ REST endpoints</strong> spanning
+              watchlists, holdings, and portfolio analytics.</li>
+            <li>Implemented atomic multi-document order execution via MongoDB sessions, optimistic concurrency locking,
+              and a 3-attempt exponential retry loop preventing race conditions.</li>
+            <li>Engineered <strong>5 portfolio aggregation pipelines</strong> for P&amp;L telemetry, asset distribution,
+              and risk metrics.</li>
           </ul>
 
           <div class="project-tags">
@@ -1595,12 +1783,20 @@
           </div>
 
           <div class="project-links">
-            <a href="https://zenith-chi-hazel.vercel.app" target="_blank" rel="noopener" class="project-link-btn primary">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            <a href="https://zenith-chi-hazel.vercel.app" target="_blank" rel="noopener"
+              class="project-link-btn primary">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
               Live Demo
             </a>
             <a href="https://github.com/Ved-jain/Zenith" target="_blank" rel="noopener" class="project-link-btn">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+              </svg>
               Source Code
             </a>
           </div>
@@ -1613,7 +1809,8 @@
     <section id="skills" class="section reveal" aria-labelledby="skills-heading">
       <div class="section-header">
         <h2 class="section-title" id="skills-heading">Technical Skills</h2>
-        <p class="section-sub">Languages, frameworks, and datastores applied across projects and competitive programming.</p>
+        <p class="section-sub">Languages, frameworks, and datastores applied across projects and competitive
+          programming.</p>
       </div>
 
       <div class="skills-grid">
@@ -1679,7 +1876,8 @@
           <span class="ach-icon">⚔️</span>
           <div class="ach-body">
             <div class="ach-title">LeetCode Knight (Rating 1925)</div>
-            <div class="ach-desc">Top 3.5% worldwide. Solved <strong>800+ algorithmic problems</strong> across LeetCode, Codeforces, and GFG with consistent contest participation.</div>
+            <div class="ach-desc">Top 3.5% worldwide. Solved <strong>800+ algorithmic problems</strong> across LeetCode,
+              Codeforces, and GFG with consistent contest participation.</div>
           </div>
         </div>
 
@@ -1687,7 +1885,9 @@
           <span class="ach-icon">🏆</span>
           <div class="ach-body">
             <div class="ach-title">TVS Credit E.P.I.C. 8.0 National Semi-Finalist</div>
-            <div class="ach-desc">National Semi-Finalist among <strong>60,000+ participants</strong> in an enterprise IT competition with prototype: <a href="https://github.com/Ved-jain/Credix" target="_blank" rel="noopener">CredIntel Alternative Credit Engine →</a></div>
+            <div class="ach-desc">National Semi-Finalist among <strong>60,000+ participants</strong> in an enterprise IT
+              competition with prototype: <a href="https://github.com/Ved-jain/Credix" target="_blank"
+                rel="noopener">CredIntel Alternative Credit Engine →</a></div>
           </div>
         </div>
 
@@ -1695,7 +1895,8 @@
           <span class="ach-icon">🥇</span>
           <div class="ach-body">
             <div class="ach-title">Code Rumble (ICPC Style) — Rank #19</div>
-            <div class="ach-desc">Ranked #19 among <strong>150+ teams</strong> in an inter-college algorithmic competition.</div>
+            <div class="ach-desc">Ranked #19 among <strong>150+ teams</strong> in an inter-college algorithmic
+              competition.</div>
           </div>
         </div>
 
@@ -1703,7 +1904,8 @@
           <span class="ach-icon">🥈</span>
           <div class="ach-body">
             <div class="ach-title">Can You Hack It Hackathon — Runner-Up</div>
-            <div class="ach-desc">Runner-Up at IIITDM Jabalpur's flagship hackathon competing against <strong>90+ engineering teams</strong>.</div>
+            <div class="ach-desc">Runner-Up at IIITDM Jabalpur's flagship hackathon competing against <strong>90+
+                engineering teams</strong>.</div>
           </div>
         </div>
 
@@ -1719,7 +1921,9 @@
           <span class="ach-icon">🏸</span>
           <div class="ach-body">
             <div class="ach-title">Campus Leadership &amp; Community</div>
-            <div class="ach-desc">Coordinator of the <strong>Badminton Club</strong> (organizing tournaments for 100+ athletes) &amp; Volunteer for <strong>HackByte 2024</strong> (150+ hackathon teams) at IIITDM Jabalpur.</div>
+            <div class="ach-desc">Coordinator of the <strong>Badminton Club</strong> (organizing tournaments for 100+
+              athletes) &amp; Volunteer for <strong>HackByte 2024</strong> (150+ hackathon teams) at IIITDM Jabalpur.
+            </div>
           </div>
         </div>
       </div>
@@ -1754,12 +1958,16 @@
 
       <div class="contact-card reveal">
         <p class="contact-intro">
-          Whether you have an internship opportunity, an interesting systems problem to discuss, or want to collaborate on an open-source project — feel free to drop me a note.
+          Whether you have an internship opportunity, an interesting systems problem to discuss, or want to collaborate
+          on an open-source project — feel free to drop me a note.
         </p>
 
         <div class="contact-row-links">
           <a href="mailto:vedjain5314@gmail.com" class="contact-link-pill">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
             vedjain5314@gmail.com
           </a>
           <button type="button" class="contact-link-pill" id="contact-copy-btn">
@@ -1768,7 +1976,8 @@
           <a href="https://github.com/Ved-jain" target="_blank" rel="noopener" class="contact-link-pill">
             GitHub
           </a>
-          <a href="https://www.linkedin.com/in/ved-jain-719094313/" target="_blank" rel="noopener" class="contact-link-pill">
+          <a href="https://www.linkedin.com/in/ved-jain-719094313/" target="_blank" rel="noopener"
+            class="contact-link-pill">
             LinkedIn
           </a>
           <a href="https://leetcode.com/u/vedjain_1/" target="_blank" rel="noopener" class="contact-link-pill">
@@ -1783,15 +1992,20 @@
         <form class="mini-form" id="contact-form">
           <div class="form-title">Send a Quick Message</div>
           <div class="form-grid">
-            <input type="text" class="form-input" id="cf-name" placeholder="Your Name" required/>
-            <input type="email" class="form-input" id="cf-email" placeholder="Your Email" required/>
+            <input type="text" class="form-input" id="cf-name" placeholder="Your Name" required />
+            <input type="email" class="form-input" id="cf-email" placeholder="Your Email" required />
           </div>
-          <input type="text" class="form-input" id="cf-subj" placeholder="Subject (e.g. SDE Internship Opportunity)" required/>
-          <textarea class="form-textarea" id="cf-msg" placeholder="Hi Ved, we'd like to talk about..." required></textarea>
+          <input type="text" class="form-input" id="cf-subj" placeholder="Subject (e.g. SDE Internship Opportunity)"
+            required />
+          <textarea class="form-textarea" id="cf-msg" placeholder="Hi Ved, we'd like to talk about..."
+            required></textarea>
           <div class="form-actions">
             <button type="submit" class="btn btn-primary" id="cf-submit-btn">
               Send Message
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="22" y1="2" x2="11" y2="13" />
+                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+              </svg>
             </button>
           </div>
         </form>
@@ -1913,8 +2127,9 @@
     const ctx = canvas ? canvas.getContext('2d') : null;
 
     if (canvas && ctx) {
-      let width = (canvas.width = window.innerWidth);
-      let height = (canvas.height = window.innerHeight);
+      let dpr = window.devicePixelRatio || 1;
+      let width = window.innerWidth;
+      let height = window.innerHeight;
 
       let dots = [];
       const SPACING = 38;
@@ -1924,6 +2139,16 @@
 
       let mouse = { x: -1000, y: -1000 };
       let auraX = -1000, auraY = -1000;
+
+      function resizeCanvas() {
+        dpr = window.devicePixelRatio || 1;
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = width * dpr;
+        canvas.height = height * dpr;
+        ctx.scale(dpr, dpr);
+        initDots();
+      }
 
       function initDots() {
         dots = [];
@@ -1950,12 +2175,14 @@
         }
       }
 
-      initDots();
+      resizeCanvas();
 
+      let lastWidth = window.innerWidth;
       window.addEventListener('resize', () => {
-        width = canvas.width = window.innerWidth;
-        height = canvas.height = window.innerHeight;
-        initDots();
+        if (Math.abs(window.innerWidth - lastWidth) > 30) {
+          lastWidth = window.innerWidth;
+          resizeCanvas();
+        }
       }, { passive: true });
 
       window.addEventListener('mousemove', (e) => {
@@ -2087,4 +2314,5 @@
     }
   </script>
 </body>
+
 </html>
